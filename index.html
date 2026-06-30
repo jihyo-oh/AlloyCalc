@@ -566,7 +566,6 @@ tr.el-row.is-first td { background: rgba(155, 89, 182, 0.08); }
     </div>
     <div id="pt-body">
       <div id="pt-grid"></div>
-      <div id="pt-legend"></div>
     </div>
     <div id="alloy-nav">
       <div id="alloy-nav-header">
@@ -851,13 +850,6 @@ function buildPT() {
     grid.appendChild(e ? makeEl(e) : gap());
   }
 
-  // legend
-  const leg = document.getElementById('pt-legend');
-  Object.keys(CAT_LABEL).forEach(c => {
-    const d = document.createElement('div'); d.className = 'leg';
-    d.innerHTML = `<div class="leg-dot" style="background:${CAT_COLOR[c]}"></div>${CAT_LABEL[c]}`;
-    leg.appendChild(d);
-  });
 }
 
 function setSelected(id) {
